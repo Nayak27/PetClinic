@@ -1,44 +1,60 @@
 node {
-    def mvnHome = tool name: 'MAVEN3', type: 'maven'
+    def mvnHome = tool name: 'MAVEN', type: 'maven'
     def mvnCli = "${mvnHome}/bin/mvn"
 
-    properties([
-        buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5')),
-        disableConcurrentBuilds(),
-        [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/gouthamchilakala/PetClinic.git/'],
-        [$class: 'ThrottleJobProperty', categories: [], limitOneJobWithMatchingParams: false, maxConcurrentPerNode: 0, maxConcurrentTotal: 0, paramsToUseForLimit: '', throttleEnabled: true, throttleOption: 'project'],
-        pipelineTriggers([githubPush()]),
-        parameters([string(defaultValue: 'DEV', description: 'env name', name: 'environment', trim: false)])
-    ])
-    stage('Checkout SCM'){
-        git branch: 'master', credentialsId: 'github-creds', url: 'https://github.com/gouthamchilakala/PetClinic'
+  
+    stage('Checkout GitHub'){
+        git branch: 'master', credentialsId: 'github-creds', url: 'https://github.com/Nayak27/PetClinic'
     }
-    stage('Read praram'){
-        echo "The environment chosen during the Job execution is ${params.environment}"
-        echo "$JENKINS_URL"
-    }
-    stage('maven compile'){
-        // def mvnHome = tool name: 'Maven_3.6', type: 'maven'
-        // def mvnCli = "${mvnHome}/bin/mvn"
+    
+    stage('Compile Project'){
         sh "${mvnCli} clean compile"
     }
-    stage('maven package'){
-        sh "${mvnCli} package -Dmaven.test.skip=true"
+    
+
+    stage("SonarQube Analysis") {
+        withSonarQubeEnv('SonarQube') {
+                 sh "${mvnCli}  sonar:sonar -Dsonar.projectKey=petclinic -Dsonar.host.url=http://ec2-3-15-214-41.us-east-2.compute.amazonaws.com:9000 -Dsonar.login=b702688d66068fb41e8c4cff9a920820f0a2bc68"
+          }
     }
-    stage('Archive atifacts'){
-        archiveArtifacts artifacts: '**/*.war', onlyIfSuccessful: true
+
+
+      stage("Quality Gate"){
+          timeout(time: 1, unit: 'HOURS') {
+              def qg = waitForQualityGate()
+              if (qg.status != 'OK') {
+                  error "Jenkins Pipeline aborted due to quality gate failure: ${qg.status}"
+              }
+          }
+      }
+    
+    stage('Package Project'){
+        sh "${mvnCli} package"
     }
+    stage('Archive/Store Build In Repository'){
+       nexusPublisher nexusInstanceId: 'NexusRepo', nexusRepositoryId: 'DemoRepo', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: '/opt/JENKINSHOME/workspace/FirstPL/target/petclinic.war']], mavenCoordinate: [artifactId: 'demoapp', groupId: 'NCR', packaging: 'war', version: '${BUILD_NUMBER}']]]
+    }
+    
     stage('Archive Test Results'){
         junit allowEmptyResults: true, testResults: '**/surefire-reports/*.xml'
     }
-    stage('Deploy To Tomcat'){
-        sshagent(['test']) {
-            sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@ec2-3-83-166-58.compute-1.amazonaws.com:/opt/apache-tomcat-7.0.94/webapps/'
-        }
+    
+    stage('Send Email'){
+        notifySuccessful()
     }
-    stage('Smoke Test'){
-        sleep 5
-        sh "curl ec2-3-83-166-58.compute-1.amazonaws.com:8080/petclinic"
-    }
+}
 
+def notifySuccessful() {
+  emailext (
+      subject: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+      body: """
+SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':
+
+
+        
+Check console output at "${env.JOB_NAME} [${env.BUILD_NUMBER}]"
+
+""",
+      recipientProviders: [[$class: 'DevelopersRecipientProvider']]
+    )
 }
