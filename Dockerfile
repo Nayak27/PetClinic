@@ -6,7 +6,7 @@ RUN mkdir /opt/tomcat/
 
 WORKDIR /opt/tomcat
 RUN yum install -y wget java-1.8.0-openjdk-devel
-RUN wget https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.40/bin/apache-tomcat-8.5.40.tar.gz
+RUN wget http://mirrors.ocf.berkeley.edu/apache/tomcat/tomcat-9/v9.0.24/bin/apache-tomcat-9.0.24.tar.gz
 RUN tar xvfz apache*.tar.gz
 RUN mv apache-tomcat-8.5.40/* /opt/tomcat/.
 RUN java -version
