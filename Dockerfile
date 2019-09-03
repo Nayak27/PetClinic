@@ -2,5 +2,5 @@
 FROM tomcat:8.0
 MAINTAINER your_name
 # COPY path-to-your-application-war path-to-webapps-in-docker-tomcat
-COPY /opt/JENKINSHOME/workspace/FirstPL/target/petclinic.war /usr/local/tomcat/webapps/
+COPY /target/petclinic.war /usr/local/tomcat/webapps/
 
