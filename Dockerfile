@@ -1,12 +1,10 @@
-FROM alpine
+FROM centos
 
 MAINTAINER Dinesh
 
 RUN mkdir /opt/tomcat/
 
 WORKDIR /opt/tomcat
-RUN apk update
-RUN apk add yum
 RUN yum install -y wget java-1.8.0-openjdk-devel
 RUN wget http://mirrors.ocf.berkeley.edu/apache/tomcat/tomcat-9/v9.0.24/bin/apache-tomcat-9.0.24.tar.gz
 RUN tar zxf apache-tomcat-9.0.24.tar.gz
