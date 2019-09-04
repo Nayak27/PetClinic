@@ -3,6 +3,28 @@
   <groupId>com.petclinicc.cucumber</groupId>
   <artifactId>com.petclinicc.cucumber</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+    <build>
+	<plugin>
+		<groupId>net.masterthought</groupId>
+		<artifactId>maven-cucumber-reporting</artifactId>
+		<version>4.9.0</version>
+		
+		<executions>
+			<execution>
+				<id>Execution</id>
+				<phase>verify</phase>
+				<goals>
+					<goal>Generate</goal>
+				</goals>
+				<configuration>
+					<projectName>Test</projectName>
+					<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+					<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+				</configuration>
+			</execution>
+		</executions>
+	</plugin>
+  </build>
   
   <dependencies>
   
