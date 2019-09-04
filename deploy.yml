@@ -34,7 +34,7 @@
 
      - name: To update the apache tomcat config
        copy:
-         src: /target/petclinic.war
+         src: /opt/JENKINSHOME/workspace/FirstPL/target/petclinic.war
          dest: /opt/"{{ tomcat }}"/webapps/
 
      - name: To start apache tomcat
