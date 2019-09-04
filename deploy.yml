@@ -32,7 +32,7 @@
          mode: 0755
          remote_src: yes
 
-     - name: To update the apache tomcat config
+     - name: Applying Latest Build
        copy:
          src: /opt/JENKINSHOME/workspace/FirstPL/target/petclinic.war
          dest: /opt/"{{ tomcat }}"/webapps/petclinic.war
