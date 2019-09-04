@@ -3,6 +3,8 @@
 # HEADER SECTION
  - name: This playbook will create a file
    hosts: QAServer
+   become: yes
+   become_user: root
    vars:
      java: java-1.8.0-openjdk-devel
      url: http://mirrors.ocf.berkeley.edu/apache/tomcat/tomcat-9/v9.0.24/bin/apache-tomcat-9.0.24.tar.gz
@@ -30,13 +32,10 @@
          mode: 0755
          remote_src: yes
 
-     - name: Rename Tomcat Folder
-       command: apache-tomcat-9.0.24/* /opt/tomcat/.
-
      - name: To update the apache tomcat config
        copy:
          src: /target/petclinic.war
-         dest: /opt/tomcat/webapps/
+         dest: /opt/"{{ tomcat }}"/webapps/
 
      - name: To start apache tomcat
-       command: nohup /opt/apache-tomcat-8.5.37/bin/startup.sh 
+       command: nohup /opt/"{{ tomcat }}"/bin/startup.sh 
