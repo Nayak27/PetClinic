@@ -15,7 +15,7 @@
 				<id>Execution</id>
 				<phase>verify</phase>
 				<goals>
-					<goal>Generate</goal>
+					<goal>generate</goal>
 				</goals>
 				<configuration>
 					<projectName>Test</projectName>
