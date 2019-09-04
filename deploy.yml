@@ -35,7 +35,7 @@
      - name: Applying Latest Build
        copy:
          src: /opt/JENKINSHOME/workspace/FirstPL/target/petclinic.war
-         dest: /opt/"{{ tomcat }}"/webapps/petclinic.war
+         dest: /opt/apache-tomcat-9.0.24/webapps/petclinic.war
 
      - name: To start apache tomcat
        command: nohup /opt/"{{ tomcat }}"/bin/startup.sh 
