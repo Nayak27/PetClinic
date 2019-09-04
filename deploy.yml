@@ -14,13 +14,7 @@
        yum:
          name: "{{ java }}"
          state: installed
-
-     - name: to create a dir
-       file:
-         path: /opt/tomcat_logs
-         state: directory
-         mode: 0644
-
+         
      - name: To download apache tomcat
        get_url: 
          url: "{{ url }}" 
