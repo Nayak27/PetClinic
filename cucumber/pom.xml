@@ -4,7 +4,8 @@
   <artifactId>com.petclinicc.cucumber</artifactId>
   <version>0.0.1-SNAPSHOT</version>
     <build>
-	<plugin>
+	<plugins>
+        <plugin>
 		<groupId>net.masterthought</groupId>
 		<artifactId>maven-cucumber-reporting</artifactId>
 		<version>4.9.0</version>
@@ -24,6 +25,7 @@
 			</execution>
 		</executions>
 	</plugin>
+    </plugins>
   </build>
   
   <dependencies>
