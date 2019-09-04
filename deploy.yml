@@ -15,17 +15,6 @@
          name: "{{ java }}"
          state: installed
 
-     - name: To create a group
-       group:
-         name: tomcatadm
-         state: present
-
-     - name: To create a user
-       user:
-         name: tomcat
-         state: present
-         groups: tomcatadm
-
      - name: to create a dir
        file:
          path: /opt/tomcat_logs
