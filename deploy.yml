@@ -2,11 +2,11 @@
 
 # HEADER SECTION
  - name: This playbook will create a file
-   hosts: webservers
+   hosts: QAServer
    vars:
      java: java-1.8.0-openjdk-devel
-     url: http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.41/bin/apache-tomcat-8.5.41.tar.gz
-     tomcat: apache-tomcat-8.5.41
+     url: http://mirrors.ocf.berkeley.edu/apache/tomcat/tomcat-9/v9.0.24/bin/apache-tomcat-9.0.24.tar.gz
+     tomcat: apache-tomcat-9.0.24
 
 # TASK SECTION
    tasks:
@@ -47,15 +47,13 @@
          mode: 0755
          remote_src: yes
 
-     - name: to fetch the server.xml file from remote servers
-       fetch:
-         src: /opt/apache-tomcat-8.5.37/conf/server.xml
-         dest: /opt/
+     - name: Rename Tomcat Folder
+       command: apache-tomcat-9.0.24/* /opt/tomcat/.
 
      - name: To update the apache tomcat config
        copy:
-         src: /opt/playbooks/server.xml
-         dest: /opt/apache-tomcat-8.5.37/conf/server.xml
+         src: /target/petclinic.war
+         dest: /opt/tomcat/webapps/
 
      - name: To start apache tomcat
-       command: nohup /opt/apache-tomcat-8.5.37/bin/startup.sh &
+       command: nohup /opt/apache-tomcat-8.5.37/bin/startup.sh 
