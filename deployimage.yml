@@ -14,3 +14,5 @@
        service:
           name: docker
           state: started
+     - name: To start apache tomcat
+       command: docker run -d --rm -p 9999:8080 --name LatestBuild nayak27/nayak27:latest
