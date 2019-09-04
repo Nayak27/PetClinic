@@ -7,8 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)  // libraries
 
-@Cucumber.Options( 
-   format = {"pretty", "html:target/Destination"} ) 
+@Cucumber.Options(format = {"pretty", "html:target/Destination"}) 
 
 
 
