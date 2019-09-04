@@ -7,7 +7,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)  // libraries
 
-@CucumberOptions(features= "Feature",glue={"StepDefination"})
+@Cucumber.Options( 
+   format = {"pretty", "html:target/Destination"} ) 
 
 
 
