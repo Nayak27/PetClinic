@@ -35,7 +35,7 @@
      - name: To update the apache tomcat config
        copy:
          src: /opt/JENKINSHOME/workspace/FirstPL/target/petclinic.war
-         dest: /opt/"{{ tomcat }}"/webapps/
+         dest: /opt/"{{ tomcat }}"/webapps/petclinic.war
 
      - name: To start apache tomcat
        command: nohup /opt/"{{ tomcat }}"/bin/startup.sh 
