@@ -36,7 +36,7 @@
             <configuration>
                 <verbose>true</verbose>
                     <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <target>1.8</target>
                 <showWarnings>true</showWarnings>
             </configuration>
         </plugin>
