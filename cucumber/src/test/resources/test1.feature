@@ -20,7 +20,7 @@
 Feature: Test petclicnic website
 
   Scenario: launch petclinic website
-    Given Open chrome and start application
+    Given Open firefox and start application
   	When I click on  home_button
   	Then user should be able to see welcome on page
   	
