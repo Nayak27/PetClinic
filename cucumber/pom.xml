@@ -64,8 +64,9 @@
     
     <dependency>
     <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>2.4.0</version>
+    <artifactId>cucumber-java8</artifactId>
+    <version>4.7.1</version>
+    <scope>test</scope>
 </dependency>
 
 <dependency>
