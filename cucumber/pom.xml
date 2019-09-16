@@ -34,9 +34,10 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.5.1</version>
             <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-                <encoding>UTF-8</encoding>
+                <verbose>true</verbose>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                <showWarnings>true</showWarnings>
             </configuration>
         </plugin>
     </plugins>
