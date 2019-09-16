@@ -1,6 +1,5 @@
 package Runner;
 
-import cucumber.api.junit;
 import org.junit.runner.RunWith;
 import cucumber.api.SnippetType;
 import cucumber.api.CucumberOptions;
