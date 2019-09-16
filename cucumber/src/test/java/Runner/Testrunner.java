@@ -21,6 +21,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources",
         glue = "com.techprimers.testing",
         format = {"json:target/cucumber.json"}
+    
+)
 
 public class Testrunner {
 
