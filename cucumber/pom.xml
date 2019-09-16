@@ -35,7 +35,7 @@
             <version>3.5.1</version>
             <configuration>
                 <verbose>true</verbose>
-                    <source>${java.version}</source>
+                    <source>1.8</source>
                     <target>1.8</target>
                 <showWarnings>true</showWarnings>
             </configuration>
