@@ -12,7 +12,7 @@
 		
 		<executions>
 			<execution>
-				<id>Execution</id>
+				<id>execution</id>
 				<phase>verify</phase>
 				<goals>
 					<goal>generate</goal>
@@ -21,6 +21,8 @@
 					<projectName>Test</projectName>
 					<outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
 					<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+                    <skippedFails>true</skippedFails>
+                    <enableFlashCharts>true</enableFlashCharts>
 				</configuration>
 			</execution>
 		</executions>
