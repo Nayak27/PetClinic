@@ -10,4 +10,8 @@
        win_copy:
          src: /opt/JenkinsHome/workspace/TestPipeline/target/petclinic.war
          dest: C:\webapps\
+     - name: Restart Tomcat service
+       win_service:
+         name: tomcat
+         state: restarted
 
