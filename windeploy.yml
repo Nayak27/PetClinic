@@ -9,9 +9,9 @@
      - name: Applying Latest Build
        win_copy:
          src: /opt/JenkinsHome/workspace/TestPipeline/target/petclinic.war
-         dest: C:\webapps\
+         dest: C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\
      - name: Restart Tomcat service
        win_service:
-         name: tomcat
+         name: Tomcat9
          state: restarted
 
