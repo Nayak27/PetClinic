@@ -1,14 +1,13 @@
-# This is my first playbook
+# This Playbook is to deploy the Build to WebServer
 
 # HEADER SECTION
  - name: This playbook will create a file
    hosts: windows-server
-  
 
 # TASK SECTION
    tasks:
-     
      - name: Applying Latest Build
-        win_copy:
-          src: /opt/JENKINSHOME/workspace/FirstPL/target/petclinic.war
-          dest: C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\
+       win_copy:
+         src: /opt/JenkinsHome/workspace/TestPipeline/target/petclinic.war
+         dest: C:\webapps\
+
