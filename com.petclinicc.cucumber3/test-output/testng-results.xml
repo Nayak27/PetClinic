@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="com.petclinicc.cucumber3" duration-ms="8003" started-at="2019-09-18T16:05:30 IST" finished-at="2019-09-18T16:05:38 IST">
+    <groups>
+    </groups>
+    <test name="petclinic" duration-ms="8003" started-at="2019-09-18T16:05:30 IST" finished-at="2019-09-18T16:05:38 IST">
+      <class name="StepDefination.StepTest">
+        <test-method status="FAIL" signature="i_click_on_home_button()[pri:0, instance:StepDefination.StepTest@67205a84]" name="i_click_on_home_button" duration-ms="17" started-at="2019-09-18T16:05:30 IST" finished-at="2019-09-18T16:05:30 IST">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at StepDefination.StepTest.i_click_on_home_button(StepTest.java:51)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:41)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:443)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:67)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- i_click_on_home_button -->
+        <test-method status="PASS" signature="open_chrome_and_start_application()[pri:0, instance:StepDefination.StepTest@67205a84]" name="open_chrome_and_start_application" duration-ms="7929" started-at="2019-09-18T16:05:30 IST" finished-at="2019-09-18T16:05:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- open_chrome_and_start_application -->
+      </class> <!-- StepDefination.StepTest -->
+    </test> <!-- petclinic -->
+  </suite> <!-- com.petclinicc.cucumber3 -->
+</testng-results>
