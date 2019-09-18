@@ -30,7 +30,7 @@ public class StepTest {
 	    // Write code here that turns the phrase above into concrete action
 		
 		configFileReader= new ConfigFileReader();
-		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\dn185059\\Downloads\\chromedriver.exe");
+		 System.setProperty("webdriver.chrome.driver", "C:\\TestDriver\\chromedriver.exe");
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\hm185100\\Desktop\\form16\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
