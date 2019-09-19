@@ -11,11 +11,11 @@ import org.openqa.selenium.support.PageFactory;
 		}
 		
 		public void perform_Search(String search) {
-			driver.navigate().to("http://192.168.1.100:8090/petclinic/");
+			driver.navigate().to("http://ec2-18-224-214-236.us-east-2.compute.amazonaws.com:8080/petclinic/");
 		}
 		
 		public void navigateTo_HomePage() {
-			driver.get("http://192.168.1.100:8090/petclinic/");
+			driver.get("http://ec2-18-224-214-236.us-east-2.compute.amazonaws.com:8080/petclinic/");
 }
 }
 	

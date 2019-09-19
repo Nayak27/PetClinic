@@ -46,3 +46,12 @@ Scenario: Adding owner
  And I enter "123465" on telephone_textbox
  And I click on AddOwner_button 
  Then user should be able to see OwnerInformation_text on page
+ 
+ 
+ Scenario: Click on find owners tab
+ 
+ Given on OwnerInformation_page
+ When I clicked on Findowners_link
+ And I enter "test" on lastname_textbox
+ And I click on  FindOwner_button
+ Then user should be able to see Owners information on page

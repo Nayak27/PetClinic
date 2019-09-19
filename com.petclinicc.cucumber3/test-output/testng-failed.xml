@@ -5,7 +5,7 @@
     <classes>
       <class name="StepDefination.StepTest">
         <methods>
-          <include name="i_click_on_home_button"/>
+          <include name="s_on_OwnerInformation_page"/>
         </methods>
       </class> <!-- StepDefination.StepTest -->
     </classes>

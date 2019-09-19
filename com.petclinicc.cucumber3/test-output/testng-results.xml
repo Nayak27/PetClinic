@@ -1,50 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="18" passed="18">
   <reporter-output>
   </reporter-output>
-  <suite name="com.petclinicc.cucumber3" duration-ms="8003" started-at="2019-09-18T16:05:30 IST" finished-at="2019-09-18T16:05:38 IST">
+  <suite name="com.petclinicc.cucumber3" duration-ms="71731" started-at="2019-09-18T20:30:39 IST" finished-at="2019-09-18T20:31:51 IST">
     <groups>
     </groups>
-    <test name="petclinic" duration-ms="8003" started-at="2019-09-18T16:05:30 IST" finished-at="2019-09-18T16:05:38 IST">
+    <test name="petclinic" duration-ms="71731" started-at="2019-09-18T20:30:39 IST" finished-at="2019-09-18T20:31:51 IST">
       <class name="StepDefination.StepTest">
-        <test-method status="FAIL" signature="i_click_on_home_button()[pri:0, instance:StepDefination.StepTest@67205a84]" name="i_click_on_home_button" duration-ms="17" started-at="2019-09-18T16:05:30 IST" finished-at="2019-09-18T16:05:30 IST">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at StepDefination.StepTest.i_click_on_home_button(StepTest.java:51)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:41)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:443)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:67)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="a_open_chrome_and_start_application()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="a_open_chrome_and_start_application" duration-ms="6610" started-at="2019-09-18T20:30:39 IST" finished-at="2019-09-18T20:30:46 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- i_click_on_home_button -->
-        <test-method status="PASS" signature="open_chrome_and_start_application()[pri:0, instance:StepDefination.StepTest@67205a84]" name="open_chrome_and_start_application" duration-ms="7929" started-at="2019-09-18T16:05:30 IST" finished-at="2019-09-18T16:05:38 IST">
+        </test-method> <!-- a_open_chrome_and_start_application -->
+        <test-method status="PASS" signature="b_i_click_on_home_button()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="b_i_click_on_home_button" duration-ms="1762" started-at="2019-09-18T20:30:46 IST" finished-at="2019-09-18T20:30:48 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- open_chrome_and_start_application -->
+        </test-method> <!-- b_i_click_on_home_button -->
+        <test-method status="PASS" signature="c_user_should_be_able_to_see_welcome_on_page()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="c_user_should_be_able_to_see_welcome_on_page" duration-ms="20" started-at="2019-09-18T20:30:48 IST" finished-at="2019-09-18T20:30:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- c_user_should_be_able_to_see_welcome_on_page -->
+        <test-method status="PASS" signature="e_i_click_on_Findowners_link()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="e_i_click_on_Findowners_link" duration-ms="358" started-at="2019-09-18T20:30:48 IST" finished-at="2019-09-18T20:30:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- e_i_click_on_Findowners_link -->
+        <test-method status="PASS" signature="h_i_click_on_Addowner_button()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="h_i_click_on_Addowner_button" duration-ms="5342" started-at="2019-09-18T20:30:48 IST" finished-at="2019-09-18T20:30:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- h_i_click_on_Addowner_button -->
+        <test-method status="PASS" signature="j_i_user_should_be_able_to_see_NewOwner_text_on_page()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="j_i_user_should_be_able_to_see_NewOwner_text_on_page" duration-ms="14" started-at="2019-09-18T20:30:54 IST" finished-at="2019-09-18T20:30:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- j_i_user_should_be_able_to_see_NewOwner_text_on_page -->
+        <test-method status="PASS" signature="k_on_NewOwner_page()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="k_on_NewOwner_page" duration-ms="1" started-at="2019-09-18T20:30:54 IST" finished-at="2019-09-18T20:30:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- k_on_NewOwner_page -->
+        <test-method status="PASS" signature="l_i_enter_on_firstname_textbox()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="l_i_enter_on_firstname_textbox" duration-ms="5065" started-at="2019-09-18T20:30:54 IST" finished-at="2019-09-18T20:30:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- l_i_enter_on_firstname_textbox -->
+        <test-method status="PASS" signature="m_i_enter_on_lastname_textbox()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="m_i_enter_on_lastname_textbox" duration-ms="5055" started-at="2019-09-18T20:30:59 IST" finished-at="2019-09-18T20:31:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- m_i_enter_on_lastname_textbox -->
+        <test-method status="PASS" signature="n_i_enter_on_Address_textbox()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="n_i_enter_on_Address_textbox" duration-ms="5082" started-at="2019-09-18T20:31:04 IST" finished-at="2019-09-18T20:31:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- n_i_enter_on_Address_textbox -->
+        <test-method status="PASS" signature="o_i_enter_on_city_textbox()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="o_i_enter_on_city_textbox" duration-ms="5063" started-at="2019-09-18T20:31:09 IST" finished-at="2019-09-18T20:31:14 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- o_i_enter_on_city_textbox -->
+        <test-method status="PASS" signature="p_i_enter_on_telephone_textbox()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="p_i_enter_on_telephone_textbox" duration-ms="5070" started-at="2019-09-18T20:31:14 IST" finished-at="2019-09-18T20:31:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- p_i_enter_on_telephone_textbox -->
+        <test-method status="PASS" signature="q_i_click_on_AddOwner_button()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="q_i_click_on_AddOwner_button" duration-ms="5864" started-at="2019-09-18T20:31:19 IST" finished-at="2019-09-18T20:31:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- q_i_click_on_AddOwner_button -->
+        <test-method status="PASS" signature="r_user_should_be_able_to_see_OwnerInformation_text_on_page()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="r_user_should_be_able_to_see_OwnerInformation_text_on_page" duration-ms="14" started-at="2019-09-18T20:31:25 IST" finished-at="2019-09-18T20:31:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- r_user_should_be_able_to_see_OwnerInformation_text_on_page -->
+        <test-method status="PASS" signature="t_i_clicked_on_Findowners_link()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="t_i_clicked_on_Findowners_link" duration-ms="5346" started-at="2019-09-18T20:31:25 IST" finished-at="2019-09-18T20:31:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- t_i_clicked_on_Findowners_link -->
+        <test-method status="PASS" signature="u_i_click_on_FindOwner_button()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="u_i_click_on_FindOwner_button" duration-ms="15127" started-at="2019-09-18T20:31:30 IST" finished-at="2019-09-18T20:31:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- u_i_click_on_FindOwner_button -->
+        <test-method status="PASS" signature="v_user_should_be_able_to_see_Owners_information_on_page()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="v_user_should_be_able_to_see_Owners_information_on_page" duration-ms="5016" started-at="2019-09-18T20:31:45 IST" finished-at="2019-09-18T20:31:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- v_user_should_be_able_to_see_Owners_information_on_page -->
+        <test-method status="PASS" signature="w_afterScenario()[pri:0, instance:StepDefination.StepTest@5d76b067]" name="w_afterScenario" duration-ms="875" started-at="2019-09-18T20:31:50 IST" finished-at="2019-09-18T20:31:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- w_afterScenario -->
       </class> <!-- StepDefination.StepTest -->
     </test> <!-- petclinic -->
   </suite> <!-- com.petclinicc.cucumber3 -->
