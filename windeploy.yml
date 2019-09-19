@@ -26,4 +26,8 @@
        win_shell: mvn clean test >> output.log
        args:
          chdir: C:\cucumber\
+     - name: Fetch Test Results
+       fetch:
+         src: C:\cucumber\test-output\emailable-report.html
+         dest: /opt/testoutput/testreport.html
 
