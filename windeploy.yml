@@ -23,7 +23,7 @@
          src: /opt/JenkinsHome/workspace/TestPipeline/com.petclinicc.cucumber3/
          dest: C:\cucumber
      - name: Run command that only runs if folder exists and runs from a specific folder
-       win_command: mvn clean test
+       win_shell: mvn clean test >> output.log
        args:
          chdir: C:\cucumber\
 
