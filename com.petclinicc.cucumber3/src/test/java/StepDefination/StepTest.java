@@ -187,7 +187,6 @@ public class StepTest  {
 		Thread.sleep(5000);
 	   
 	}
-	@Test
 	@Then("^user should be able to see Owners information on page$")
 	public void v_user_should_be_able_to_see_Owners_information_on_page() throws Throwable {
 		driver.findElement(By.xpath("//*[contains(text(),'Owners')]"));
